@@ -1,0 +1,34 @@
+// ブレイクポイント -----
+$bp: (
+  sp: "max-width: 767px",
+  pc: "min-width: 768px",
+);
+
+@mixin media($key) {
+  @media screen and (#{map-get($bp, $key)}) {
+    @content;
+  }
+}
+
+// それぞれのSCSSの読み込み -----
+
+// 共通CSS
+@import "common";
+
+// 部品CSS
+@import "components";
+
+// ログインCSS
+@import "login";
+
+// ヘッダー
+@import "header";
+
+// 一般ページ
+@import "general/index";
+
+// 管理者ページ
+@import "admin/index";
+
+// フッター
+@import "footer";

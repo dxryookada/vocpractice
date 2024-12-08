@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/* --- 共通CSS --- */
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: clamp(24px, 2.6vw, 28px);
+}
+
+h3 {
+  font-size: clamp(20px, 2.2vw, 24px);
+}
+
+/* --- ログイン --- */
+#login-form {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  row-gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* --- ヘッダー --- */
+header {
+  background-color: mediumblue;
+  color: white;
+}
+header > nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header > nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+header a {
+  color: white;
+}
+
+/* --- 一般ユーザーページ --- */
+#period {
+  display: grid;
+  grid-template-columns: 20% repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+#commendation > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  font-size: clamp(16px, 2vw, 24px);
+}
+#commendation > ul li:nth-of-type(1) > span {
+  color: gold;
+}
+#commendation > ul li:nth-of-type(2) > span {
+  color: silver;
+}
+#commendation > ul li:nth-of-type(3) > span {
+  color: saddlebrown;
+}
+
+#totalling > output {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 60% 40%;
+}
+#totalling > output > figure {
+  background-color: lightgray;
+}
+
+#ranking > output {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 60% 40%;
+}
+#ranking > output > div > ul {
+  font-size: clamp(16px, 2vw, 24px);
+}
+#ranking > output > div > ul li {
+  cursor: pointer;
+}
+#ranking > output > div > ul li:nth-of-type(1) span:nth-of-type(1) {
+  color: gold;
+}
+#ranking > output > div > ul li:nth-of-type(2) span:nth-of-type(1) {
+  color: silver;
+}
+#ranking > output > div > ul li:nth-of-type(3) span:nth-of-type(1) {
+  color: saddlebrown;
+}
+#ranking > output > div:nth-of-type(2) > span:nth-of-type(1) {
+  color: gold;
+}
+#ranking > output > div:nth-of-type(2) > figure {
+  height: 200px;
+  background-color: lightgray;
+}
+
+/* --- フッター --- */
+footer {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+  font-size: 0.7rem;
+  background-color: mediumvioletred;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
